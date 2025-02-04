@@ -33,13 +33,12 @@ export const Data = ({ data }) => {
 
   const [currentPackageData, setPackage] = useState(0);
   const [activeData, setActiveData] = useState(scraperData);
-  console.log(activeData);
 
   useEffect(() => {
     if (currentPackageData === 0) setActiveData(scraperData);
     if (currentPackageData === 1) setActiveData(dimfuData);
     if (currentPackageData === 2) setActiveData(rethoraData);
-  }, [currentPackageData]);
+  }, [currentPackageData, data]);
 
   return (
     <>
